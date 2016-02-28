@@ -1,0 +1,20 @@
+{
+  "name": "fiftin.github.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-jekyll": "0.0.0",
+    "run-sequence": "^1.1.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
