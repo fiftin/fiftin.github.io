@@ -13,7 +13,7 @@ gulp.task('vendor:clean', function() {
 
 gulp.task('vendor:bootstrap:js', function() {
   return gulp.src(
-    'bower_components/bootstrap-sass/assets/javascripts/bootstrap/bootstrap.min.js'
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
   ).pipe(gulp.dest('vendor/bootstrap'));
 });
 
@@ -31,7 +31,7 @@ gulp.task('vendor:jquery', function() {
   ).pipe(gulp.dest('vendor/jquery'));
 });
 
-gulp.task('jekyll', function (done){
+gulp.task('jekyll:build', function (done){
   var spawn = require('child_process').spawn;
   var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
   jekyll.on('exit', function(code) {
@@ -39,6 +39,26 @@ gulp.task('jekyll', function (done){
   });
 });
 
+gulp.task('jekyll:serve', function (done){
+  var spawn = require('child_process').spawn;
+  var jekyll = spawn('jekyll', ['serve'], {stdio: 'inherit'});
+  jekyll.on('exit', function(code) {
+    done(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
+  });
+});
+
 gulp.task('default', function() {
-  runSequence('bower', 'vendor:clean', ['vendor:bootstrap', 'vendor:jquery'], 'jekyll');
+  runSequence(
+    'bower',
+    'vendor:clean',
+    ['vendor:bootstrap', 'vendor:jquery'],
+    'jekyll:build');
+});
+
+gulp.task('serve', function() {
+  runSequence(
+    'bower',
+    'vendor:clean',
+    ['vendor:bootstrap', 'vendor:jquery'],
+    'jekyll:serve');
 });

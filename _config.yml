@@ -19,3 +19,9 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+exclude:
+  - vendor/bootstrap/stylesheets
+  - gulpfile.js
+  - package.json
+  - bower.json
