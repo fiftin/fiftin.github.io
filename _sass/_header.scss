@@ -1,0 +1,46 @@
+@import "../vendor/bootstrap/stylesheets/bootstrap/variables";
+
+$site-header-color: #052842;
+
+$header-height: 130px;
+$havbar-height: 50px;
+$img-height: $havbar-height;
+
+.site-header {
+  background: $site-header-color;
+  height: $header-height;
+  padding-top:  ($header-height - $havbar-height) / 2;
+  padding-bottom:  ($header-height - $havbar-height) / 2;
+}
+
+.site-header_havbar {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  margin-bottom: 0px;
+  height: $havbar-height;
+}
+
+.site-header_img {
+  height: $img-height;
+}
+
+.site-header_brand {
+  margin-top: ($havbar-height - $img-height) / 2;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
+.site-header_menu-item {
+  text-transform: uppercase;
+}
+
+.site-header_phone {
+  padding-top: 10px;
+}
+
+.site-header_email {
+  font-size: $font-size-small;
+}
