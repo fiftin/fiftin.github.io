@@ -1,1 +1,32 @@
+// Delete xs, sm bootstrap breakpoints.
+$screen-xs:                  1px;
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+$screen-sm:                  2px;
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+$screen-md:                  3px;
+$screen-md-min:              $screen-md;
+$screen-desktop:             $screen-md-min;
+
+$body-bg:               #663399;
+$text-color:            white;
+$link-color:            white;
+$link-hover-color:      $link-color;
+
+// Navbar links
+$navbar-default-link-color:                $link-color;
+$navbar-default-link-hover-color:          $link-color;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         $link-color;
+$navbar-default-link-active-bg:            transparent;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../vendor/bootstrap/stylesheets/bootstrap";
